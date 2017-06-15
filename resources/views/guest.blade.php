@@ -10,11 +10,14 @@
         <nav>
         <br>
           <ul class="nav pull-right">
-            <li><a href="login" class="btn btn-primary">Login as Admin</a></li>
+            {{-- <a href="login" class="btn btn-primary">Login as Admin</a> --}}
+            <br>
+            <a href="{{ url('/') }}" class="btn btn-primary">Kembali ke Halaman Utama</a>
           </ul>
         </nav>
         <h3 class="text-muted">Stok Barang UC</h3>
       </div>
+      
       <div>
       <form method="post">
         <nav>
