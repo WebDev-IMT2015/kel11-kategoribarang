@@ -7,9 +7,9 @@
 
             <div class="col-md-9">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Edit Post #{{ $post->id }}</div>
+                    <div class="panel-heading">Edit Barang #{{ $barangs->id }}</div>
                     <div class="panel-body">
-                        <a href="{{ url('/posts') }}" title="Back"><button class="btn btn-warning btn-xs"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
+                        <a href="{{ url('/barangs') }}" title="Back"><button class="btn btn-warning btn-xs"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
                         <br />
                         <br />
 
@@ -21,14 +21,14 @@
                             </ul>
                         @endif
 
-                        {!! Form::model($post, [
+                        {!! Form::model($barangs, [
                             'method' => 'PATCH',
-                            'url' => ['/posts', $post->id],
+                            'url' => ['/barangs', $barangs->id],
                             'class' => 'form-horizontal',
                             'files' => true
                         ]) !!}
 
-                        @include ('posts.form', ['submitButtonText' => 'Update'])
+                        @include ('barangs.form', ['submitButtonText' => 'Update'])
 
                         {!! Form::close() !!}
 
