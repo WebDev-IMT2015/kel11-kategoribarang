@@ -33,7 +33,7 @@
                                     <tr>
                                         <th>ID</th><td>{{ $barang->id }}</td>
                                     </tr>
-                                    <tr><th> Title </th><td> {{ $barang->title }} </td></tr><tr><th> Body </th><td> {{ $barang->body }} </td></tr>
+                                    <tr><th> Name </th><td> {{ $barang->namabarang }} </td></tr>
                                 </tbody>
                             </table>
                         </div>
