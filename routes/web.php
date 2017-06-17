@@ -19,13 +19,10 @@ Route::get('login', function () {
     return view('login');
 });
 
-Route::get('guest', function () {
-    return view('guest');
-});
+Route::resource('guest', 'barangsController');
 
-Route::get('logindaftar', function () {
-    return view('logindaftar');
-});
+Route::get('/guest', 'barangsController@userbarang')->name('guest');
+    
 
 Auth::routes();
 
@@ -34,3 +31,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('posts', 'PostsController');
 
 Route::resource('barangs', 'barangsController');
+
+Route::get('/barangs', 'barangsController@index')->name('barang');

@@ -32,6 +32,22 @@ class barangsController extends Controller
         return view('barangs.index', compact('barangs'));
     }
 
+     public function userbarang(Request $request)
+    {
+        $keyword = $request->get('search');
+        $perPage = 25;
+
+        if (!empty($keyword)) {
+            $barangs = barang::where('title', 'LIKE', "%$keyword%")
+                ->orWhere('body', 'LIKE', "%$keyword%")
+                ->paginate($perPage);
+        } else {
+            $barangs = barang::paginate($perPage);
+        }
+
+        return view('barangs.userbarang', compact('barangs'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *

@@ -15,9 +15,9 @@
 
                         {!! Form::open(['method' => 'GET', 'url' => '/barangs', 'class' => 'navbar-form navbar-right', 'role' => 'search'])  !!}
                         <div class="input-group">
-                            <input type="text" class="form-control" name="search" placeholder="Search...">
+                            <input type="text" class="form-control" name="search" placeholder="Mencari...">
                             <span class="input-group-btn">
-                                <button class="btn btn-default" type="submit">
+                                <button class="btn btn-primary" type="submit"><img src="../search-icon.png" width="15px" height="15px">
                                     <i class="fa fa-search"></i>
                                 </button>
                             </span>
@@ -30,7 +30,8 @@
                             <table class="table table-borderless">
                                 <thead>
                                     <tr>
-                                        <th>ID</th><th>Name</th><th>tipe</th><th>Deksripsi</th><th>Dimensi</th><th>Berat</th><th>Foto</th><th>Tindakan
+                                        <th>ID</th><th>Nama</th><th>Tipe</th><th>Deksripsi</th><th>Dimensi</th><th>Berat</th><th>Foto
+                                        </th><th>Tindakan
                                         </th>
                                     </tr>
                                 </thead>
