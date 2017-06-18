@@ -22,9 +22,14 @@ class barangsController extends Controller
         $perPage = 25;
 
         if (!empty($keyword)) {
-            $barangs = barang::where('title', 'LIKE', "%$keyword%")
-				->orWhere('body', 'LIKE', "%$keyword%")
-				->paginate($perPage);
+            $barangs = barang::where('namabarang', 'LIKE', "%$keyword%")
+                ->orWhere('id', 'LIKE', "%$keyword%")
+                ->orWhere('tipe', 'LIKE', "%$keyword%")
+                ->orWhere('deskripsi', 'LIKE', "%$keyword%")
+                ->orWhere('dimensi', 'LIKE', "%$keyword%")
+                ->orWhere('berat', 'LIKE', "%$keyword%")
+                ->orWhere('foto', 'LIKE', "%$keyword%")
+                ->paginate($perPage);
         } else {
             $barangs = barang::paginate($perPage);
         }
@@ -38,8 +43,13 @@ class barangsController extends Controller
         $perPage = 25;
 
         if (!empty($keyword)) {
-            $barangs = barang::where('title', 'LIKE', "%$keyword%")
-                ->orWhere('body', 'LIKE', "%$keyword%")
+            $barangs = barang::where('namabarang', 'LIKE', "%$keyword%")
+                ->orWhere('id', 'LIKE', "%$keyword%")
+                ->orWhere('tipe', 'LIKE', "%$keyword%")
+                ->orWhere('deskripsi', 'LIKE', "%$keyword%")
+                ->orWhere('dimensi', 'LIKE', "%$keyword%")
+                ->orWhere('berat', 'LIKE', "%$keyword%")
+                ->orWhere('foto', 'LIKE', "%$keyword%")
                 ->paginate($perPage);
         } else {
             $barangs = barang::paginate($perPage);
@@ -140,5 +150,33 @@ class barangsController extends Controller
         Session::flash('flash_message', 'barang deleted!');
 
         return redirect('barangs');
+    }
+
+    public function showUploadFile(Request $request)
+    {
+              $file = $request->file('image');
+           
+              //Display File Name
+              echo 'File Name: '.$file->getClientOriginalName();
+              echo '<br>';
+           
+              //Display File Extension
+              echo 'File Extension: '.$file->getClientOriginalExtension();
+              echo '<br>';
+           
+              //Display File Real Path
+              echo 'File Real Path: '.$file->getRealPath();
+              echo '<br>';
+           
+              //Display File Size
+              echo 'File Size: '.$file->getSize();
+              echo '<br>';
+           
+              //Display File Mime Type
+              echo 'File Mime Type: '.$file->getMimeType();
+           
+              //Move Uploaded File
+              $destinationPath = 'uploads';
+              $file->move($destinationPath,$file->getClientOriginalName());
     }
 }

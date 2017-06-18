@@ -7,12 +7,27 @@
 
             <div class="col-md-9">
                 <div class="panel panel-default">
-                   
-                        <div class="table-responsive">
+                    <div class="panel-heading">Barang</div>
+
+                        {!! Form::open(['method' => 'GET', 'url' => '/barangs.userbarang', 'class' => 'navbar-form navbar-right', 'role' => 'search'])  !!}
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="search" placeholder="Mencari...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-primary" type="submit"><img src="../search-icon.png" width="15px" height="15px">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                        {!! Form::close() !!}
+
+                    <div class="panel-body">
+                        <br/>
+                        <br/>
+                    <div class="table-responsive">
                             <table class="table table-borderless">
                                 <thead>
                                     <tr>
-                                        <th>ID</th><th>Name</th><th>Tipe</th><th>Deksripsi</th><th>Dimensi</th><th>Berat</th><th>Foto
+                                        <th>ID</th><th>Nama</th><th>Tipe</th><th>Deksripsi</th><th>Dimensi</th><th>Berat</th><th>Foto
                                         </th>
                                     </tr>
                                 </thead>
@@ -30,10 +45,10 @@
                                 @endforeach
                                 </tbody>
                             </table>
-                            <div class="pagination-wrapper"> {!! $barangs->appends(['search' => Request::get('search')])->render() !!} </div>
-
+                            <div class="pagination-wrapper"> {!! $barangs->appends(['search' => Request::get('search')])->render() !!} 
+                            </div>
                     </div>
-                </div>
+                    </div>
             </div>
         </div>
     </div>

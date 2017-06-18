@@ -22,7 +22,6 @@ Route::get('login', function () {
 Route::resource('guest', 'barangsController');
 
 Route::get('/guest', 'barangsController@userbarang')->name('guest');
-    
 
 Auth::routes();
 
@@ -33,3 +32,5 @@ Route::resource('posts', 'PostsController');
 Route::resource('barangs', 'barangsController');
 
 Route::get('/barangs', 'barangsController@index')->name('barang');
+
+Route::get('/barangs.userbarang', 'barangsController@userbarang')->name('userbarang');
