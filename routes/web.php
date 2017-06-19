@@ -21,7 +21,11 @@ Route::get('login', function () {
 
 Route::resource('guest', 'barangsController');
 
+<<<<<<< HEAD
 Route::get('/guest', 'barangsController@userbarang');
+=======
+Route::get('/guest', 'barangsController@userbarang')->name('guest');
+>>>>>>> da67f18e6a667ab590035177838c48931c8fbeae
 
 Auth::routes();
 

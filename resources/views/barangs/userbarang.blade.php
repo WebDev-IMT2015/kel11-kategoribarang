@@ -9,7 +9,10 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Barang</div>
 
+<<<<<<< HEAD
                     <div class="panel-body">
+=======
+>>>>>>> da67f18e6a667ab590035177838c48931c8fbeae
                         {!! Form::open(['method' => 'GET', 'url' => '/barangs.userbarang', 'class' => 'navbar-form navbar-right', 'role' => 'search'])  !!}
                         <div class="input-group">
                             <input type="text" class="form-control" name="search" placeholder="Mencari...">
@@ -20,9 +23,16 @@
                             </span>
                         </div>
                         {!! Form::close() !!}
+<<<<<<< HEAD
                     </div>
 
                     <div class="panel-body">
+=======
+
+                    <div class="panel-body">
+                        <br/>
+                        <br/>
+>>>>>>> da67f18e6a667ab590035177838c48931c8fbeae
                     <div class="table-responsive">
                             <table class="table table-borderless">
                                 <thead>

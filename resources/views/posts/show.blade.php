@@ -7,10 +7,10 @@
 
             <div class="col-md-9">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Barang {{ $barang->id }}</div>
+                    <div class="panel-heading">barang {{ $barang->id }}</div>
                     <div class="panel-body">
 
-                        <a href="{{ url('/barangs') }}" title="Back"><button class="btn btn-warning btn-xs"><i class="fa fa-arrow-left" aria-hidden="true"></i> Kembali</button></a>
+                        <a href="{{ url('/barangs') }}" title="Back"><button class="btn btn-warning btn-xs"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
                         <a href="{{ url('/barangs/' . $barang->id . '/edit') }}" title="Edit barang"><button class="btn btn-primary btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
                         {!! Form::open([
                             'method'=>'DELETE',
@@ -33,11 +33,7 @@
                                     <tr>
                                         <th>ID</th><td>{{ $barang->id }}</td>
                                     </tr>
-<<<<<<< HEAD
-                                    <tr><th> Nama </th><td> {{ $barang->namabarang }} </td></tr>
-=======
                                     <tr><th> Name </th><td> {{ $barang->namabarang }} </td></tr>
->>>>>>> da67f18e6a667ab590035177838c48931c8fbeae
                                 </tbody>
                             </table>
                         </div>

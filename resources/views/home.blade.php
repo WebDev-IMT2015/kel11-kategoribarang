@@ -10,7 +10,11 @@
                 <div class="panel-body">
                     Anda sudah masuk, apakah anda ingin melihat barang-barang?
                     <br>
+<<<<<<< HEAD
                     <a href="{{ url('/barangs') }}">Iya, saya ingin menambah barang juga</a> atau 
+=======
+                    <a href="{{ url('/barangs') }}">Iya, saya ingin masuk </a> atau 
+>>>>>>> da67f18e6a667ab590035177838c48931c8fbeae
                     <a href="{{ url('/') }}">kembali ke halaman utama</a>
                 </div>
             </div>
