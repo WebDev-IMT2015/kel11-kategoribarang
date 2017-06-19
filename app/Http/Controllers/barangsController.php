@@ -152,37 +152,4 @@ class barangsController extends Controller
         return redirect('barangs');
     }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-    public function showUploadFile(Request $request)
-    {
-              $file = $request->file('image');
-           
-              //Display File Name
-              echo 'File Name: '.$file->getClientOriginalName();
-              echo '<br>';
-           
-              //Display File Extension
-              echo 'File Extension: '.$file->getClientOriginalExtension();
-              echo '<br>';
-           
-              //Display File Real Path
-              echo 'File Real Path: '.$file->getRealPath();
-              echo '<br>';
-           
-              //Display File Size
-              echo 'File Size: '.$file->getSize();
-              echo '<br>';
-           
-              //Display File Mime Type
-              echo 'File Mime Type: '.$file->getMimeType();
-           
-              //Move Uploaded File
-              $destinationPath = 'uploads';
-              $file->move($destinationPath,$file->getClientOriginalName());
-    }
->>>>>>> da67f18e6a667ab590035177838c48931c8fbeae
->>>>>>> 94aa69675c1827965b87377634694aa4e3748821
 }
