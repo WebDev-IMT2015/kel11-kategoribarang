@@ -33,7 +33,15 @@
                                     <tr>
                                         <th>ID</th><td>{{ $barang->id }}</td>
                                     </tr>
+<<<<<<< HEAD
                                     <tr><th> Nama </th><td> {{ $barang->namabarang }} </td></tr>
+=======
+<<<<<<< HEAD
+                                    <tr><th> Nama </th><td> {{ $barang->namabarang }} </td></tr>
+=======
+                                    <tr><th> Name </th><td> {{ $barang->namabarang }} </td></tr>
+>>>>>>> da67f18e6a667ab590035177838c48931c8fbeae
+>>>>>>> 94aa69675c1827965b87377634694aa4e3748821
                                 </tbody>
                             </table>
                         </div>
