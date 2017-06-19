@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Web Development | UAS | Jeffrey dan Derrick</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -74,7 +74,8 @@
                         <a href="{{ url('/login') }}">Login</a>
                     @endif
                 </div>
-            @endif --}}
+            @endif 
+--}}
 
             <div class="content">
                 <div class="title m-b-md">
@@ -82,8 +83,8 @@
                 </div>
 
                 <div class="links">
-                    <a href="guest">LIHAT BARANG-BARANG</a>
-                    <a href="logindaftar">MASUK SEBAGAI ADMIN</a>
+                    <a href="{{ url('/guest') }}">LIHAT BARANG-BARANG</a>
+                    <a href="{{ url('/login') }}">MASUK SEBAGAI ADMIN</a>
                 </div>
             </div>
         </div>
