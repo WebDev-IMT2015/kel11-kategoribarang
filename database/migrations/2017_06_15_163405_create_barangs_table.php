@@ -20,9 +20,10 @@ class CreateBarangsTable extends Migration
             $table->string('deskripsi');
             $table->string('dimensi');
             $table->string('berat');
-            $table->string('foto');
+            $table->file('foto');
             $table->timestamps();
-        });    }
+        });    
+    }
 
     /**
      * Reverse the migrations.
