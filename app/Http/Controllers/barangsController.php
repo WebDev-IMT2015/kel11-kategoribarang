@@ -22,14 +22,40 @@ class barangsController extends Controller
         $perPage = 25;
 
         if (!empty($keyword)) {
-            $barangs = barang::where('title', 'LIKE', "%$keyword%")
-				->orWhere('body', 'LIKE', "%$keyword%")
-				->paginate($perPage);
+            $barangs = barang::where('namabarang', 'LIKE', "%$keyword%")
+                ->orWhere('id', 'LIKE', "%$keyword%")
+                ->orWhere('tipe', 'LIKE', "%$keyword%")
+                ->orWhere('deskripsi', 'LIKE', "%$keyword%")
+                ->orWhere('dimensi', 'LIKE', "%$keyword%")
+                ->orWhere('berat', 'LIKE', "%$keyword%")
+                ->orWhere('foto', 'LIKE', "%$keyword%")
+                ->paginate($perPage);
         } else {
             $barangs = barang::paginate($perPage);
         }
 
         return view('barangs.index', compact('barangs'));
+    }
+
+     public function userbarang(Request $request)
+    {
+        $keyword = $request->get('search');
+        $perPage = 25;
+
+        if (!empty($keyword)) {
+            $barangs = barang::where('namabarang', 'LIKE', "%$keyword%")
+                ->orWhere('id', 'LIKE', "%$keyword%")
+                ->orWhere('tipe', 'LIKE', "%$keyword%")
+                ->orWhere('deskripsi', 'LIKE', "%$keyword%")
+                ->orWhere('dimensi', 'LIKE', "%$keyword%")
+                ->orWhere('berat', 'LIKE', "%$keyword%")
+                ->orWhere('foto', 'LIKE', "%$keyword%")
+                ->paginate($perPage);
+        } else {
+            $barangs = barang::paginate($perPage);
+        }
+
+        return view('barangs.userbarang', compact('barangs'));
     }
 
     /**
@@ -125,4 +151,5 @@ class barangsController extends Controller
 
         return redirect('barangs');
     }
+
 }
